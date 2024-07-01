@@ -1,6 +1,7 @@
-# Challenge Summary
+# Character Generation
 
-I used pretty much 4 hours, as requested. It was an interesting challenge and I learned a few new tricks while hacking.
+This project is a simple web application that generates a character description based on a prompt. The description is
+generated using the OpenAI GPT-4o API.
 
 ## Starting the project
 
@@ -50,7 +51,3 @@ feel more responsive.
  
 - Generate character art using stable diffusion
 - Use an uploaded picture as a basis for the text generation and character art
-
-## Thank you
-
-Thank you for reading this far. I hope you enjoyed the project. I am looking forward to your feedback.
