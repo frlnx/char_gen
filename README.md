@@ -4,6 +4,8 @@ I used pretty much 4 hours, as requested. It was an interesting challenge and I 
 
 ## Starting the project
 
+Rename the `.env-template` file to `.env` and fill in the OpenAI API key.
+
 `docker compose up --build`
 
 You can now access the project at http://localhost:8008
