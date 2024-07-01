@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create a DnD Character</title>
+    <script src="static/formHandler.js"></script>
+</head>
+<body>
+    <h1>Create Your DnD Character</h1>
+    <form action="/create-character/" method="post" id="characterForm">
+        <label for="activity">Which of these activities would your character excel at during their free time?</label><br>
+        <select id="activity" name="activity">
+            {% for activity in activities %}
+                <option value="{{ activity.name }}">{{ activity.value }}</option>
+            {% endfor %}
+        </select><br><br>
+        <label for="home">Where did your character grow up?</label><br>
+        <select id="home" name="home">
+            {% for home in homes %}
+                <option value="{{ home.name }}">{{ home.value }}</option>
+            {% endfor %}
+        </select><br><br>
+        <label for="moral_dilemma">How does your character approach a moral dilemma?</label><br>
+        <select id="moral_dilemma" name="moral_dilemma">
+            {% for dilemma in dilemmas %}
+                <option value="{{ dilemma.name }}">{{ dilemma.value }}</option>
+            {% endfor %}
+        </select><br><br>
+        <label for="adventure">What motivates your character to embark on an adventure?</label><br>
+        <select id="adventure" name="adventure">
+            {% for adventure in adventures %}
+                <option value="{{ adventure.name }}">{{ adventure.value }}</option>
+            {% endfor %}
+        </select><br><br>
+        <label for="demeanor">Which of these traits best describes your character's demeanor?</label><br>
+        <select id="demeanor" name="demeanor">
+            {% for demeanor in demeanors %}
+                <option value="{{ demeanor.name }}">{{ demeanor.value }}</option>
+            {% endfor %}
+        </select><br><br>
+        <input type="submit" value="Create Character">
+    </form>
+</body>
+</html>
