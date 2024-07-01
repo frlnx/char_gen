@@ -1,7 +1,9 @@
 from models import Character
+from services.backstory.clients import BaseClient
 
 
 class BackstoryService:
+    client: BaseClient
     def __init__(self):
         from services.backstory.provider import client
         self.client = client
@@ -12,5 +14,5 @@ class BackstoryService:
                   f"They approach moral dilemmas by {answers.moral_dilemma} "
                   f"and are motivated to embark on an adventure by {answers.adventure}. "
                   f"Their demeanor is {answers.demeanor}.")
-        backstory = self.client.get_backstory(prompt)
+        backstory = await self.client.generate_text(prompt)
         return backstory
