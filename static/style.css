@@ -1,0 +1,50 @@
+.form {
+    display: inline-flex;
+    margin-right: 2em;
+    justify-content: right;
+    width: 50%;
+}
+
+.story {
+    display: inline-flex;
+    width: 50%;
+    min-width: 50%;
+    line-height: 1.5em;
+    justify-content: left;
+}
+
+.story p {
+    max-width: 800px;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+}
+
+html {
+    margin: 0;
+}
+
+.content {
+    display: flex;
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader {
+    opacity: 0;
+    transition: opacity 1s;
+    float: right;
+    width: 50%;
+}
+
+.loaderVisible {
+    opacity: 1;
+}

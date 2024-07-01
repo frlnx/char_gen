@@ -14,3 +14,5 @@ I need you to create a rich and captivating backstory for a Dungeons and Dragons
 
 5. **Character Demeanor**:
    - **Answer**: [Insert chosen demeanor here]
+
+Respond with the backstory only. Do not iterate on the information you were given.

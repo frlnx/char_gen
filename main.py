@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 
 from fastapi.responses import HTMLResponse, FileResponse
+from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from fastapi import Request
 
@@ -34,10 +35,7 @@ async def get_form(request: Request):
     return templates.TemplateResponse("form.html", context=context, media_type="text/html")
 
 
-
-@app.get("/static/formHandler.js")
-async def serve_static_files():
-    return FileResponse("static/formHandler.js")
+app.mount("/static", StaticFiles(directory="static"), name="static")
 
 @app.post("/create-character/")
 async def create_character(answers: CharacterAnswers):
