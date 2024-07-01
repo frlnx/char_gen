@@ -1,4 +1,5 @@
 from openai import AsyncOpenAI
+from openai.types.chat import ChatCompletionMessage
 
 
 class BaseClient:
@@ -26,7 +27,8 @@ class OpenAIClient(BaseClient):
                 {"role": "user", "content": answers},
             ]
         )
-        return response.choices[0].message.text
+        message: ChatCompletionMessage = response.choices[0].message
+        return message.content
 
 
 class DummyClient(BaseClient):
